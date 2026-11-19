@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DOUBTDESK — a focused learning space for classes, notes, meetings, and community." />
+    <title>DOUBTDESK — Learn without limits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#home" aria-label="DOUBTDESK home">
+          <span class="brand-mark">D</span>
+          <span>DOUBT<span class="brand-accent">DESK</span></span>
+        </a>
+        <div class="workspace-label">LEARNING SPACE</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-item active" href="#home" data-view="home"><span class="nav-icon">⌂</span>Overview</a>
+          <a class="nav-item" href="#courses" data-view="courses"><span class="nav-icon">▣</span>My courses</a>
+          <a class="nav-item" href="#meetings" data-view="meetings"><span class="nav-icon">◷</span>Meetings <span class="nav-badge">3</span></a>
+          <a class="nav-item" href="#notes" data-view="notes"><span class="nav-icon">▤</span>Notes library</a>
+          <a class="nav-item" href="#community" data-view="community"><span class="nav-icon">♧</span>Community</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <a class="nav-item" href="#assistant" data-view="assistant"><span class="nav-icon">✦</span>AI study assistant <span class="new-dot"></span></a>
+          <a class="nav-item" href="#settings" data-view="settings"><span class="nav-icon">⚙</span>Settings</a>
+          <div class="sidebar-user">
+            <div class="avatar avatar-purple">AK</div>
+            <div><strong>Alex Kumar</strong><small>Student account</small></div>
+            <button class="icon-button" id="logoutButton" aria-label="Log out">↪</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content" id="home">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="pageTitle">Overview</strong></div>
+          <div class="topbar-actions">
+            <button class="search-trigger" id="searchTrigger"><span>⌕</span> Search anything <kbd>⌘ K</kbd></button>
+            <button class="icon-button notification" aria-label="Notifications">♢<i></i></button>
+            <button class="avatar avatar-purple top-avatar" aria-label="Open profile">AK</button>
+          </div>
+        </header>
+
+        <div class="page-content" id="pageContent">
+          <section class="welcome-row">
+            <div>
+              <p class="eyebrow">TUESDAY, 18 NOVEMBER 2026</p>
+              <h1>Good morning, Alex <span class="wave">✦</span></h1>
+              <p class="muted intro">Ready to make some progress today?</p>
+            </div>
+            <button class="button button-primary" id="createButton"><span>＋</span> Create new</button>
+          </section>
+
+          <section class="hero-card">
+            <div class="hero-copy">
+              <div class="pill pill-light">YOUR DAILY FOCUS</div>
+              <h2>Small steps.<br /><em>Big breakthroughs.</em></h2>
+              <p>Keep your learning momentum going. You’re only 25 minutes away from completing today’s goal.</p>
+              <button class="button button-light" id="continueButton">Continue learning <span>→</span></button>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="orb orb-one"></div><div class="orb orb-two"></div>
+              <div class="art-card art-card-main"><span class="mini-icon">✦</span><strong>Today’s goal</strong><b>2 / 3</b><div class="progress"><i style="width: 67%"></i></div><small>One more session to go</small></div>
+              <div class="art-card art-card-float"><span>◷</span><div><strong>25 min</strong><small>Deep focus</small></div></div>
+            </div>
+          </section>
+
+          <section class="stats-grid">
+            <div class="stat-card"><div class="stat-icon orange">◷</div><div><small>LEARNING STREAK</small><strong>12 days</strong><span class="positive">↑ 2 from last week</span></div></div>
+            <div class="stat-card"><div class="stat-icon blue">▣</div><div><small>COURSE PROGRESS</small><strong>68%</strong><span>Across 4 courses</span></div></div>
+            <div class="stat-card"><div class="stat-icon purple">✦</div><div><small>FOCUS HOURS</small><strong>8.4 hrs</strong><span class="positive">↑ 12% this week</span></div></div>
+          </section>
+
+          <div class="section-heading"><div><p class="eyebrow">PICK UP WHERE YOU LEFT OFF</p><h2>Continue learning</h2></div><a href="#courses" data-view="courses">View all courses <span>→</span></a></div>
+          <section class="course-grid">
+            <article class="course-card course-indigo"><div class="course-top"><span class="course-symbol">∫</span><span class="course-menu">•••</span></div><span class="course-tag">MATHEMATICS</span><h3>Calculus: The foundations</h3><p>with Dr. Priya Sharma</p><div class="course-progress"><div class="progress"><i style="width: 72%"></i></div><span>72%</span></div><div class="course-footer"><small>Next: Integration basics</small><button class="round-arrow" aria-label="Open calculus course">→</button></div></article>
+            <article class="course-card course-peach"><div class="course-top"><span class="course-symbol">⌬</span><span class="course-menu">•••</span></div><span class="course-tag">PHYSICS</span><h3>Mechanics &amp; motion</h3><p>with Arjun Mehta</p><div class="course-progress"><div class="progress"><i style="width: 45%"></i></div><span>45%</span></div><div class="course-footer"><small>Next: Newton’s laws</small><button class="round-arrow" aria-label="Open physics course">→</button></div></article>
+            <article class="course-card course-sage"><div class="course-top"><span class="course-symbol">Aa</span><span class="course-menu">•••</span></div><span class="course-tag">ENGLISH</span><h3>Writing with clarity</h3><p>with Maya Iyer</p><div class="course-progress"><div class="progress"><i style="width: 28%"></i></div><span>28%</span></div><div class="course-footer"><small>Next: Stronger sentences</small><button class="round-arrow" aria-label="Open English course">→</button></div></article>
+          </section>
+
+          <div class="two-column">
+            <section class="panel"><div class="section-heading compact"><div><p class="eyebrow">UP NEXT</p><h2>Upcoming meetings</h2></div><a href="#meetings" data-view="meetings">See calendar <span>→</span></a></div><div class="meeting-list"><div class="meeting-item"><div class="date-tile"><b>19</b><small>NOV</small></div><div class="meeting-info"><strong>Live doubt-solving: Calculus</strong><span><i class="status-dot live"></i>Tomorrow · 6:00 PM · 45 min</span></div><button class="button button-small button-outline">Join</button></div><div class="meeting-item"><div class="date-tile blue-tile"><b>21</b><small>NOV</small></div><div class="meeting-info"><strong>Mechanics problem clinic</strong><span>Friday · 5:30 PM · 60 min</span></div><button class="button button-small button-outline">Details</button></div></div></section>
+            <section class="panel assistant-panel"><div class="assistant-glow">✦</div><div><p class="eyebrow">MEET YOUR STUDY PARTNER</p><h2>Stuck on something?</h2><p>Ask Nova to explain a concept, summarize your notes, or make you a quick quiz.</p><button class="button button-dark" data-view="assistant">Ask Nova <span>→</span></button></div></section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="auth-overlay" id="authOverlay" aria-hidden="true">
+      <div class="auth-modal">
+        <button class="modal-close" id="closeAuth" aria-label="Close">×</button>
+        <div class="auth-brand"><span class="brand-mark">D</span><span>DOUBT<span class="brand-accent">DESK</span></span></div>
+        <div class="auth-tabs"><button class="auth-tab active" data-auth="login">Log in</button><button class="auth-tab" data-auth="register">Create account</button></div>
+        <div id="loginForm" class="auth-form"><p class="eyebrow">WELCOME BACK</p><h2>Continue your learning.</h2><p class="muted">Enter your details to access your workspace.</p><label>Email address<input type="email" placeholder="you@example.com" /></label><label>Password<div class="password-field"><input type="password" placeholder="Enter your password" /><button type="button">Show</button></div></label><a class="forgot" href="#">Forgot password?</a><button class="button button-primary full-width" id="loginButton">Log in <span>→</span></button><div class="or"><span>or continue with</span></div><button class="social-button">G <span>Continue with Google</span></button></div>
+        <div id="registerForm" class="auth-form hidden"><p class="eyebrow">GET STARTED</p><h2>Make learning feel lighter.</h2><p class="muted">Create your free DOUBTDESK account.</p><label>Full name<input type="text" placeholder="Alex Kumar" /></label><label>Email address<input type="email" placeholder="you@example.com" /></label><label>Create password<input type="password" placeholder="At least 8 characters" /></label><button class="button button-primary full-width" id="registerButton">Create account <span>→</span></button><p class="terms">By continuing, you agree to our Terms and Privacy Policy.</p></div>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
